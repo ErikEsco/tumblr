@@ -8,15 +8,25 @@
 		%header
 			%h1 {Title}
 		%div#main
-			{block:Posts}
-			{block:Text}
-			{block:Title}
-				%a{href:"{Permalink}"} {Title}
-			{/block:Title}
-			{Body}
-			%small
-				Tagged
-				%li
-					
-			{/block:Text}
-			{/block:Posts}
+			%div#post-text
+				{block:Posts}
+				{block:Text}
+				{block:Title}
+					%a{href:"{Permalink}"} {Title}
+				{/block:Title}
+				{Body}
+				%small
+					Tagged
+					%ul
+						%li
+							{block:HasTags}
+							{block:Tags}
+							%a{href:"{TagURL}"} {Tag}
+							{/block:Tags}
+							{/block:HasTags}				
+				{/block:Text}
+				{/block:Posts}
+				%small
+					{PostType}
+
+			%div#post-pic
