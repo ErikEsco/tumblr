@@ -4,6 +4,7 @@
 		%meta{name:"viewport",content:"width=device-width,intial-scale=1.0"}
 		%title {block:PostTitle}{PostTitle}:{/block:PostTitle}{Title}
 		%link{rel:"alternate",type:"application/rss+xml",href:"{RSS}"}
+		%link{rel:"stylesheet",href:"http://erikescobar.me/styles.css"}
 	%body
 		%header
 			%h1 {Title}
@@ -34,7 +35,6 @@
 				%a{href:"{Permalink}"} {Quote}
 				{block:Source}
 				{Source}
-				{/block:Source}
 				%small
 					Tagged
 					%ul
@@ -44,6 +44,7 @@
 							%a{href:"{TagURL}"} {Tag}
 							{/block:Tags}
 							{/block:HasTags}
+				{/block:Source}
 				{/block:Posts}
 				%small
 					{PostType}
