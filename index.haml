@@ -29,4 +29,29 @@
 				%small
 					{PostType}
 
-			%div#post-pic
+			%div#post-quote
+				{block:Posts}
+				%a{href:"{Permalink}"} {Quote}
+				{block:Source}
+				{Source}
+				{/block:Source}
+				%small
+					Tagged
+					%ul
+						%li
+							{block:HasTags}
+							{block:Tags}
+							%a{href:"{TagURL}"} {Tag}
+							{/block:Tags}
+							{/block:HasTags}
+				{/block:Posts}
+				%small
+					{PostType}
+
+			%div#post-link
+				{block:Posts}
+				{block:Link}
+				%a{href:"{Permalink}"} {Name}
+				%a{href:"{Permalink}"} {URL}
+				{/block:Link}
+				{/block:Posts}

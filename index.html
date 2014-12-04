@@ -35,7 +35,37 @@
           {PostType}
         </small>
       </div>
-      <div id='post-pic'></div>
+      <div id='post-quote'>
+        {block:Posts}
+        <a href='{Permalink}'>{Quote}</a>
+        {block:Source}
+        {Source}
+        {/block:Source}
+        <small>
+          Tagged
+          <ul>
+            <li>
+              {block:HasTags}
+              {block:Tags}
+              <a href='{TagURL}'>{Tag}</a>
+              {/block:Tags}
+              {/block:HasTags}
+            </li>
+          </ul>
+        </small>
+        {/block:Posts}
+        <small>
+          {PostType}
+        </small>
+      </div>
+      <div id='post-link'>
+        {block:Posts}
+        {block:Link}
+        <a href='{Permalink}'>{Name}</a>
+        <a href='{Permalink}'>{URL}</a>
+        {/block:Link}
+        {/block:Posts}
+      </div>
     </div>
   </body>
 </html>
