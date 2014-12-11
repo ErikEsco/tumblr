@@ -8,8 +8,11 @@
 	%body
 		%header
 			%h1 {Title}
-		%div#main
-			%div#post-text
+			Hello, welcome to my customized tumblr theme! Hope you enjoy it! 
+			You can reach my GitHub here:
+			%a{href:"http://github.com/eescobar1"} 
+		%div.main
+			%div.post-text
 				{block:Posts}
 				{block:Text}
 				{block:Title}
@@ -30,7 +33,7 @@
 				%small
 					{PostType}
 
-			%div#post-quote
+			%div.post-quote
 				{block:Posts}
 				%a{href:"{Permalink}"} {Quote}
 				{block:Source}
@@ -49,10 +52,15 @@
 				%small
 					{PostType}
 
-			%div#post-link
+			%div.post-link
 				{block:Posts}
 				{block:Link}
 				%a{href:"{Permalink}"} {Name}
 				%a{href:"{Permalink}"} {URL}
 				{/block:Link}
 				{/block:Posts}
+
+		%footer
+			Erik Escobar-Ocon
+			COM 327 - Fall 2014
+			Copyright 2014

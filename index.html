@@ -9,9 +9,12 @@
   <body>
     <header>
       <h1>{Title}</h1>
+      Hello, welcome to my customized tumblr theme! Hope you enjoy it! 
+      You can reach my GitHub here:
+      <a href='http://github.com/eescobar1'></a>
     </header>
-    <div id='main'>
-      <div id='post-text'>
+    <div class='main'>
+      <div class='post-text'>
         {block:Posts}
         {block:Text}
         {block:Title}
@@ -36,7 +39,7 @@
           {PostType}
         </small>
       </div>
-      <div id='post-quote'>
+      <div class='post-quote'>
         {block:Posts}
         <a href='{Permalink}'>{Quote}</a>
         {block:Source}
@@ -59,7 +62,7 @@
           {PostType}
         </small>
       </div>
-      <div id='post-link'>
+      <div class='post-link'>
         {block:Posts}
         {block:Link}
         <a href='{Permalink}'>{Name}</a>
@@ -68,5 +71,10 @@
         {/block:Posts}
       </div>
     </div>
+    <footer>
+      Erik Escobar-Ocon
+      COM 327 - Fall 2014
+      Copyright 2014
+    </footer>
   </body>
 </html>
